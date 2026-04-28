@@ -45,20 +45,53 @@ def process_inputs(audio_filepath, image_filepath):
     )
 
     return speech_to_text_output, doctor_response, output_audio_path
-
-
-iface = gr.Interface(
-    fn=process_inputs,
-    inputs=[
-        gr.Audio(sources=["microphone"], type="filepath"),
-        gr.Image(type="filepath")
-    ],
-    outputs=[
-        gr.Textbox(label="Speech to Text"),
-        gr.Textbox(label="Doctor's Response"),
-        gr.Audio()
-    ],
-    title="AI Doctor with Vision and Voice"
+    
+# theme for futuristic foundation
+theme = gr.themes.Soft(
+    primary_hue="sky", 
+    secondary_hue="slate", 
+    neutral_hue="slate",
+).set(
+    body_background_fill="*neutral_950",
+    body_text_color="*neutral_50",
+    button_primary_background_fill="*primary_600",
 )
 
-iface.launch(debug=True)
+
+with gr.Blocks(theme=theme) as demo:
+    
+    gr.Markdown("#  AI HEALTH DIAGNOSTIC ASSISTANT ", elem_id="chatbot-title")
+    
+    with gr.Row():
+        with gr.Column():
+            audio_input = gr.Audio(sources=["microphone"], type="filepath", label="Patient Voice Input")
+            image_input = gr.Image(type="filepath", label="Medical Scan")
+            submit_btn = gr.Button("Analyze Patient Data", variant="primary")
+        
+        with gr.Column():
+            text_output = gr.Textbox(label="Transcript")
+            doctor_response = gr.Textbox(label="Doctor's Analysis")
+            audio_output = gr.Audio(label="Doctor's Voice Response")
+
+    submit_btn.click(
+        fn=process_inputs,
+        inputs=[audio_input, image_input],
+        outputs=[text_output, doctor_response, audio_output]
+    )
+
+if __name__ == "__main__":
+    # CSS block
+    futuristic_css = """
+    #chatbot-title { 
+        text-align: center !important; 
+        font-family: 'Segoe UI', sans-serif !important; 
+        color: #38bdf8 !important; 
+        text-shadow: 0 0 15px #38bdf8;
+    }
+    .gradio-container {
+        background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)) !important;
+        background-size: cover !important;
+        font-family: 'Segoe UI', sans-serif !important;
+    }
+    """
+    demo.launch(debug=True, css=futuristic_css)
