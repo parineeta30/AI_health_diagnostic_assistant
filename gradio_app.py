@@ -60,7 +60,7 @@ theme = gr.themes.Soft(
 
 with gr.Blocks(theme=theme) as demo:
     
-    gr.Markdown("#  AI HEALTH DIAGNOSTIC ASSISTANT ", elem_id="chatbot-title")
+    gr.Markdown("#  MediVision  ", elem_id="chatbot-title")
     
     with gr.Row():
         with gr.Column():
