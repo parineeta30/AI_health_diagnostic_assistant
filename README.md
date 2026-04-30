@@ -125,7 +125,7 @@ Launches the complete web interface with all integrated features. Access at `htt
 - **Frontend**: Gradio
 - **APIs**: Groq (speech-to-text, image analysis), Google gTTS (text-to-speech)
 - **Models**: Llama-4-scout-17b, Whisper-large-v3
-- **Libraries**: LangChain, pydub, SpeechRecognition
+- **Libraries**: pydub, SpeechRecognition
 
 ## Module Overview
 
