@@ -8,12 +8,12 @@ from brain_doctor import encode_image, analyze_image_with_query
 from voice_patient import transcribe_with_groq
 from voice_doctor import text_to_speech_with_gtts
 
-system_prompt = """You are an AI-powered healthcare assistant for educational purposes. 
-Analyze the provided image along with the user’s symptoms and identify any visible patterns or abnormalities.
-Provide a clear and concise explanation of possible causes (not a medical diagnosis). 
+system_prompt = """You are an AI-powered healthcare assistant for educational purposes.
+Analyze the provided image along with the user's symptoms and identify any visible patterns or abnormalities.
+Provide a clear and concise explanation of possible causes (not a medical diagnosis).
 Suggest general precautions or next steps where appropriate.
-If the condition appears serious or uncertain, recommend consulting a qualified medical professional. 
-Keep the response natural, human-like, and easy to understand. Limit the response to 2–3 sentences."""
+If the condition appears serious or uncertain, recommend consulting a qualified medical professional.
+Keep the response natural, human-like, and easy to understand. Limit the response to 2-3 sentences."""
 
 
 def process_inputs(audio_filepath, image_filepath):
