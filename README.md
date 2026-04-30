@@ -138,7 +138,7 @@ Launches the complete web interface with all integrated features. Access at `htt
 
 ## Troubleshooting
 
-**Audio not recording?**
+**Audio not recording**
 - Check microphone permissions and ffmpeg installation
 
 **Image analysis failing**
