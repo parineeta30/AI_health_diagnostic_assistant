@@ -1,6 +1,6 @@
-# AI Health Diagnostic Assistant
+# MediVision AI Assistant
 
-An intelligent healthcare chatbot that analyzes medical conditions through voice input, image analysis, and AI-powered medical assessment with voice response.
+An intelligent healthcare chatbot that analyzes medical conditions through voice input, image analysis, and AI-powered medical assessment with voice response.It performs symptom interpretation and visual pattern recognition rather than diagnosis.
 
 ## Overview
 
