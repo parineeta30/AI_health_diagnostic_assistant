@@ -1,4 +1,4 @@
-#Step-1: Setup audio recorder(ffmpeg and portstudio)
+#Step-1: Setup audio recorder
 # ffmpeg,portaudio,speechrecognition,pydub
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,7 +11,7 @@ logging.basicConfig( level=logging.INFO,format='%(asctime)s - %(levelname)s - %(
 
 def record_audio(file_path, timeout=20, phrase_time_limit=None):
     """
-    Simplified function to record audio from the microphone and save it as an MP3 file.
+    function to record audio from the microphone and save it as an MP3 file.
 
     Args:
     file_path (str): Path to save the recorded audio file.
