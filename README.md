@@ -115,7 +115,7 @@ Launches the complete web interface with all integrated features. Access at `htt
 ## How to Use
 
 1. Run the Gradio application: `python gradio_app.py`
-2. Record patient voice or upload an audio file
+2. Record patient voice
 3. Upload a medical image/scan
 4. Click "Analyze Patient Data"
 5. View transcript, doctor's analysis, and hear the voice response
